@@ -1,0 +1,45 @@
+# output column
+output_column: churn
+
+# Path related
+dataset_path: data/raw/internet_service_churn.csv
+dataset_cleaned_path: data/raw/data.pkl
+train_set_path:
+- data/raw/x_train.pkl
+- data/raw/y_train.pkl
+valid_set_path:
+- data/raw/x_valid.pkl
+- data/raw/y_valid.pkl
+test_set_path:
+- data/raw/x_test.pkl
+- data/raw/y_test.pkl
+production_model_path: model/production_model.pkl
+
+# predictors
+predictors:
+- is_tv_subscriber
+- is_movie_package_subscriber
+- subscription_age
+- bill_avg
+- reamining_contract
+- service_failure_count
+- download_avg
+- upload_avg
+- download_over_limit
+
+# random state
+random_state: 31
+
+# outliers columns
+outliers_cols:
+- bill_avg
+- upload_avg
+- download_avg
+- subscription_age
+
+# drop unused features
+drop_list: id
+
+# Splitting related
+test_size: 0.3
+valid_size: 0.5
